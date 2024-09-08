@@ -1,12 +1,11 @@
 import express, { Request, Response } from 'express';
-import dotenv from 'dotenv';
-
+//import dotenv from 'dotenv';
+import moviesRoutesV1 from './routes/v1/moviesRoutes';
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-const envFile = process.env.NODE_ENV === 'development' ? '.env.dev' : '.env';
-dotenv.config({ path: envFile });
+app.use('/api/v1', moviesRoutesV1);
 
 app.get('/', (req: Request, res: Response) => {
     res.send('Hello, TypeScript with Express!');

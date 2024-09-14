@@ -1,11 +1,11 @@
 class ProducerValueObject {
     constructor(
         private name: string,
-        private sourceId: string,
-        private extraInfo?: string
+        private sourceId: string | undefined,
+        private extraInfo?: string | undefined
     ) {}
 
-    public getSourceId(): string {
+    public getSourceId(): string | undefined{
         return this.sourceId;
     }
 
@@ -13,3 +13,5 @@ class ProducerValueObject {
         return this.name;
     }
 }
+
+export {ProducerValueObject}

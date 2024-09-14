@@ -1,12 +1,16 @@
+import {RoleValueObject} from "./RoleValueObject";
+import {ISourceDetails} from "movier";
+
 class ActorValueObject {
     constructor(
         private name: string,
-        private sourceId: string,
+        private sourceId: string | undefined,
         private roles: RoleValueObject[],
-        private extraInfo?: string
-    ) {}
+        private extraInfo?: string,
+    ) {
+    }
 
-    public getSourceId(): string {
+    public getSourceId(): string | undefined {
         return this.sourceId;
     }
 
@@ -14,3 +18,5 @@ class ActorValueObject {
         return this.name;
     }
 }
+
+export {ActorValueObject}

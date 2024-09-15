@@ -1,19 +1,18 @@
-import {ISourceDetails} from "movier";
-
+/* eslint-disable no-empty-function */
 class DirectorValueObject {
-    constructor(
-        private name: string,
-        private sourceId: string | undefined,
-        private extraInfo?: string | undefined
-    ) {}
+  constructor(
+    private name: string,
+    private sourceId: string | undefined,
+    private extraInfo?: string | undefined,
+  ) {}
 
-    public getSourceId(): string | undefined {
-        return this.sourceId;
-    }
+  public getSourceId(): string | undefined {
+    return this.sourceId;
+  }
 
-    public getName(): string {
-        return this.name;
-    }
+  public getName(): string {
+    return this.name;
+  }
 }
 
-export {DirectorValueObject}
+export { DirectorValueObject };

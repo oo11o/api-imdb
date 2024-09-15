@@ -18,6 +18,9 @@
     "prettier"
   ],
   "rules": {
+    "import/extensions": ["off"], // Вимкнути правило для розширень
+    "import/named": "off", // Вимкнути перевірку імпортів
+    "import/no-unresolved": ["error", { "ignore": ["index.js"] }],// Ігнорування специфічних помилок
     "prettier/prettier": [
       "error",
       {

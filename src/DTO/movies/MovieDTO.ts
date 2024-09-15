@@ -1,38 +1,38 @@
 import {
-    ActorValueObject,
-    DirectorValueObject,
-    ProducerValueObject,
-    WriterValueObject,
-    BudgetValueObject,
-    RateValueObject,
-} from './valueObject';
+  ActorValueObject,
+  DirectorValueObject,
+  ProducerValueObject,
+  WriterValueObject,
+  BudgetValueObject,
+  RateValueObject,
+} from "./valueObject/index.js";
 
 export interface MovieDTO {
-    idImdb: string;
-    lang: string;
+  idImdb: string;
+  lang: string;
 
-    name: string
-    plot: string;
+  name: string;
+  plot: string;
 
-    countries: string[];
-    taglines: string[];
+  countries: string[];
+  taglines: string[];
 
-    directors: DirectorValueObject[];
-    writers: WriterValueObject[];
-    producers: ProducerValueObject[];
-    actors: ActorValueObject[];
+  directors: DirectorValueObject[];
+  writers: WriterValueObject[];
+  producers: ProducerValueObject[];
+  actors: ActorValueObject[];
 
-    year: number;
-    posterImage: string
+  year: number;
+  posterImage: string;
 
-    type: string;
+  type: string;
 
-    genres: string[];
-    keywords: string[];
-    timeInSecond: number;
-    budget: BudgetValueObject;
+  genres: string[];
+  keywords: string[];
+  timeInSecond: number;
+  budget: BudgetValueObject;
 
-    allRates: RateValueObject[];
-    ageCategoryTitle: string;
-    scanDate: Date
+  allRates: RateValueObject[];
+  ageCategoryTitle: string;
+  scanDate: Date;
 }

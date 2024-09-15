@@ -1,7 +1,7 @@
-export { ActorValueObject } from './ActorValueObject';
-export { BudgetValueObject } from './BudgetValueObject';
-export { DirectorValueObject } from './DirectorValueObject';
-export { ProducerValueObject } from './ProducerValueObject';
-export { RoleValueObject } from './RoleValueObject';
-export { RateValueObject } from './RateValueObject';
-export { WriterValueObject } from './WriterValueObject';
+export { ActorValueObject } from "./ActorValueObject.js";
+export { BudgetValueObject } from "./BudgetValueObject.js";
+export { DirectorValueObject } from "./DirectorValueObject.js";
+export { ProducerValueObject } from "./ProducerValueObject.js";
+export { RoleValueObject } from "./RoleValueObject.js";
+export { RateValueObject } from "./RateValueObject.js";
+export { WriterValueObject } from "./WriterValueObject.js";

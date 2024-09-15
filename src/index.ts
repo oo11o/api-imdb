@@ -1,8 +1,8 @@
-import express, { Request, Response } from 'express';
-//import dotenv from 'dotenv';
-import moviesRoutesV1 from './routes/v1/moviesRoutes';
+import  express, {Express, Request, Response} from 'express';
+// import dotenv from 'dotenv';
+import moviesRoutesV1 from './routes/v1/moviesRoutes.js';
 
-const app = express();
+const app: Express = express();
 const port = process.env.PORT || 3000;
 
 app.use('/api/v1', moviesRoutesV1);

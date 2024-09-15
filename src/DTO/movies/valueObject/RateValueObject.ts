@@ -1,13 +1,14 @@
+/* eslint-disable no-empty-function */
 class RateValueObject {
-    constructor(
-        private rate: number,
-        private rateSource?: string,
-        private votesCount?: number
-    ) {}
+  constructor(
+    private rate: number,
+    private rateSource?: string,
+    private votesCount?: number,
+  ) {}
 
-    public getRate(): number {
-        return this.rate;
-    }
+  public getRate(): number {
+    return this.rate;
+  }
 }
 
-export {RateValueObject}
+export { RateValueObject };

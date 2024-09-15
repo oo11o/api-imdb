@@ -1,22 +1,21 @@
-import {RoleValueObject} from "./RoleValueObject";
-import {ISourceDetails} from "movier";
+import { RoleValueObject } from "./RoleValueObject.js";
 
+/* eslint-disable no-empty-function */
 class ActorValueObject {
-    constructor(
-        private name: string,
-        private sourceId: string | undefined,
-        private roles: RoleValueObject[],
-        private extraInfo?: string,
-    ) {
-    }
+  constructor(
+    private name: string,
+    private sourceId: string | undefined,
+    private roles: RoleValueObject[],
+    private extraInfo?: string,
+  ) {}
 
-    public getSourceId(): string | undefined {
-        return this.sourceId;
-    }
+  public getSourceId(): string | undefined {
+    return this.sourceId;
+  }
 
-    public getName(): string {
-        return this.name;
-    }
+  public getName(): string {
+    return this.name;
+  }
 }
 
-export {ActorValueObject}
+export { ActorValueObject };

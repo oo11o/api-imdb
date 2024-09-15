@@ -9,3 +9,5 @@ class RateValueObject {
         return this.rate;
     }
 }
+
+export {RateValueObject}

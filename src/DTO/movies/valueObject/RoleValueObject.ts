@@ -8,3 +8,5 @@ class RoleValueObject {
         return this.name;
     }
 }
+
+export {RoleValueObject}

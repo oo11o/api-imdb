@@ -1,11 +1,13 @@
+import {ISourceDetails} from "movier";
+
 class DirectorValueObject {
     constructor(
         private name: string,
-        private sourceId: string,
-        private extraInfo?: string
+        private sourceId: string | undefined,
+        private extraInfo?: string | undefined
     ) {}
 
-    public getSourceId(): string {
+    public getSourceId(): string | undefined {
         return this.sourceId;
     }
 
@@ -13,3 +15,5 @@ class DirectorValueObject {
         return this.name;
     }
 }
+
+export {DirectorValueObject}

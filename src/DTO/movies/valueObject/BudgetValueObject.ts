@@ -1,10 +1,10 @@
 class BudgetValueObject{
     constructor(
-        private budget: number,
+        private budget: number | undefined,
         private currency: string,
     ) {}
 
-    public getBudget(): number {
+    public getBudget(): number | undefined {
         return this.budget;
     }
 
@@ -12,3 +12,5 @@ class BudgetValueObject{
         return this.currency;
     }
 }
+
+export {BudgetValueObject}

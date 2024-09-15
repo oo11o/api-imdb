@@ -5,17 +5,33 @@
     "sourceType": "module"
   },
   "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended"
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
   ],
   "env": {
     "node": true,
     "es2021": true
   },
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "prettier"
   ],
   "rules": {
-    // ваші правила
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 80,
+        "tabWidth": 4,
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "bracketSpacing": true,
+        "semi": true,
+        "arrowParens": "always"
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "no-underscore-dangle": "off",
+    "no-useless-constructor": "off"
   }
 }

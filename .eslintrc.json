@@ -13,14 +13,12 @@
     "node": true,
     "es2021": true
   },
-  "plugins": [
-    "@typescript-eslint",
-    "prettier"
-  ],
+  "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
     "import/extensions": ["off"], // Вимкнути правило для розширень
     "import/named": "off", // Вимкнути перевірку імпортів
-    "import/no-unresolved": ["error", { "ignore": ["index.js"] }],// Ігнорування специфічних помилок
+    "import/no-unresolved": ["error", { "ignore": ["index.js"] }], // Ігнорування специфічних помилок
+    "indent": ["error", 4],
     "prettier/prettier": [
       "error",
       {

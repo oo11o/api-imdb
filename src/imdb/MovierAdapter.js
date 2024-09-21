@@ -1,6 +1,4 @@
 import * as movier from 'movier';
-import { MovieDTO } from '../DTO/movies/MovieDTO.js';
-import { ImdbParserInterface } from './ImdbParserInterface.js';
 import {
     ActorValueObject,
     BudgetValueObject,
@@ -9,12 +7,12 @@ import {
     RateValueObject,
     RoleValueObject,
     WriterValueObject,
-} from '../DTO/movies/valueObject/index.js';
+} from '../DTO/movies/valueObject/index';
 
-class MovierAdapter implements ImdbParserInterface {
-    private movier = movier;
+class MovierAdapter {
+    movier = movier;
 
-    async getDetailsByIMDBId(id: string): Promise<MovieDTO> {
+    async getDetailsByIMDBId(id) {
         if (!id) {
             throw new Error('ID is required');
         }
@@ -22,19 +20,18 @@ class MovierAdapter implements ImdbParserInterface {
             const result = await this.movier.getTitleDetailsByIMDBId(id);
             return {
                 actors: result.casts.map(
-                    (item: movier.ICastDetails) =>
+                    (item) =>
                         new ActorValueObject(
                             item.name,
                             item.source?.sourceId,
                             item.roles.map(
-                                (role: movier.IRoleDetails) =>
-                                    new RoleValueObject(role.name)
+                                (role) => new RoleValueObject(role.name)
                             ),
                             item.extraInfo
                         )
                 ),
                 allRates: result.allRates.map(
-                    (item: movier.IRateDetails) =>
+                    (item) =>
                         new RateValueObject(
                             item.rate,
                             item.rateSource,
@@ -42,7 +39,7 @@ class MovierAdapter implements ImdbParserInterface {
                         )
                 ),
                 directors: result.directors.map(
-                    (item: movier.IPersonDetails) =>
+                    (item) =>
                         new DirectorValueObject(
                             item.name,
                             item.source?.sourceId,
@@ -50,7 +47,7 @@ class MovierAdapter implements ImdbParserInterface {
                         )
                 ),
                 writers: result.writers.map(
-                    (item: movier.IPersonDetails) =>
+                    (item) =>
                         new WriterValueObject(
                             item.name,
                             item.source?.sourceId,
@@ -58,14 +55,13 @@ class MovierAdapter implements ImdbParserInterface {
                         )
                 ),
                 producers: result.producers.map(
-                    (item: movier.IPersonDetails) =>
+                    (item) =>
                         new ProducerValueObject(
                             item.name,
                             item.source?.sourceId,
                             item.extraInfo
                         )
                 ),
-
                 genres: result.genres,
                 idImdb: id,
                 countries: result.countriesOfOrigin,
@@ -78,7 +74,6 @@ class MovierAdapter implements ImdbParserInterface {
                 taglines: result.taglines,
                 timeInSecond: result.runtime.seconds,
                 year: result.titleYear,
-
                 budget: new BudgetValueObject(result.boxOffice?.budget, 'usd'),
                 ageCategoryTitle: result.ageCategoryTitle,
                 scanDate: new Date(),
@@ -94,5 +89,4 @@ class MovierAdapter implements ImdbParserInterface {
         }
     }
 }
-
 export { MovierAdapter };

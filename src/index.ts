@@ -1,4 +1,4 @@
-import  express, {Express, Request, Response} from 'express';
+import express, { Express, Request, Response } from 'express';
 // import dotenv from 'dotenv';
 import moviesRoutesV1 from './routes/v1/moviesRoutes.js';
 

@@ -6,12 +6,15 @@ class WriterValueObject {
         private extraInfo?: string | undefined
     ) {}
 
+    public getName(): string {
+        return this.name;
+    }
     public getSourceId(): string | undefined {
         return this.sourceId;
     }
 
-    public getName(): string {
-        return this.name;
+    public getExtraInfo(): string | undefined {
+        return this.extraInfo;
     }
 }
 

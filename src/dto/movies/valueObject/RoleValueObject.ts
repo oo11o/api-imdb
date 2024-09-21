@@ -8,6 +8,10 @@ class RoleValueObject {
     public getName(): string {
         return this.name;
     }
+
+    public getImage(): string | undefined {
+        return this.image;
+    }
 }
 
 export { RoleValueObject };

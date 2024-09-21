@@ -9,12 +9,21 @@ class ActorValueObject {
         private extraInfo?: string
     ) {}
 
+
+    public getName(): string {
+        return this.name;
+    }
+
     public getSourceId(): string | undefined {
         return this.sourceId;
     }
 
-    public getName(): string {
-        return this.name;
+    public getRoles(): RoleValueObject[] {
+        return this.roles;
+    }
+
+    public getExtraInfo(): string | undefined {
+        return this.extraInfo;
     }
 }
 

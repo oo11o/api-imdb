@@ -1,3 +1,5 @@
+/* istanbul ignore file */
+
 export { ActorValueObject } from './ActorValueObject.js';
 export { BudgetValueObject } from './BudgetValueObject.js';
 export { DirectorValueObject } from './DirectorValueObject.js';

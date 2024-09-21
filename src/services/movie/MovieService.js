@@ -1,6 +1,6 @@
 import * as movier from 'movier';
 
-class ImdbService {
+class MovieService {
     movier = movier;
 
     async getMovieByIMDBId(id) {
@@ -16,4 +16,4 @@ class ImdbService {
         return movieData;
     }
 }
-export { ImdbService };
+export { MovieService };

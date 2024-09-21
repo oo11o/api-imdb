@@ -1,7 +1,15 @@
 import { Router, Request, Response } from 'express';
-import { ErrorResponseDTO } from "../../dto/responses/ErrorRespomseDTO";
+import { ErrorResponseDTO } from '../../DTO/responses/ErrorRespomseDTO.js';
+import { MovierAdapter } from '../../imdb/MovierAdapter.js';
 
 const router = Router();
+
+router.get('/movies/:id', async (req: Request, res: Response) => {
+    const test = new MovierAdapter();
+    const { id } = req.params;
+
+    res.json(await test.getDetailsByIMDBId(id));
+});
 
 router.get('/movies', (req: Request, res: Response) => {
     const errorResponse: ErrorResponseDTO = {
@@ -9,14 +17,10 @@ router.get('/movies', (req: Request, res: Response) => {
         error: {
             message: 'No Found',
             code: '404',
-            details: {}
-        }
+            details: {},
+        },
     };
     res.status(404).json(errorResponse);
-});
-
-router.get('/movies/:id', (req: Request, res: Response) => {
-    res.json({ message: 'id' });
 });
 
 export default router;

@@ -1,5 +1,5 @@
 import * as movier from 'movier';
-import { MovieDTO } from '../DTO/movies/MovieDTO.js';
+import { MovieDTO } from '../dto/movies/MovieDTO.js';
 import { ImdbParserInterface } from './ImdbParserInterface.js';
 import {
     ActorValueObject,
@@ -9,7 +9,7 @@ import {
     RateValueObject,
     RoleValueObject,
     WriterValueObject,
-} from '../DTO/movies/valueObject/index.js';
+} from '../dto/movies/valueObject/index.js';
 
 class MovierAdapter implements ImdbParserInterface {
     private movier = movier;

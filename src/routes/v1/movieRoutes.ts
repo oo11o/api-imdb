@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
-import { ErrorResponseDTO } from '../../DTO/responses/ErrorRespomseDTO.js';
-import { MovierAdapter } from '../../imdb/MovierAdapter.js';
+import { ErrorResponseDTO } from '../../dto/responses/ErrorRespomseDTO.js';
+import { MovierAdapter } from '../../parser/MovierAdapter.js';
 
 const router = Router();
 

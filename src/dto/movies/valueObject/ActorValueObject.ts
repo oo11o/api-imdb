@@ -9,7 +9,6 @@ class ActorValueObject {
         private extraInfo?: string
     ) {}
 
-
     public getName(): string {
         return this.name;
     }

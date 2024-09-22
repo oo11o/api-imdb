@@ -11,10 +11,10 @@ class RateValueObject {
     }
 
     public getRateSource(): string {
-         return this.rateSource;
+        return this.rateSource;
     }
 
-    public getVotesCount():  number | undefined{
+    public getVotesCount(): number | undefined {
         return this.votesCount;
     }
 }

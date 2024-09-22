@@ -9,6 +9,7 @@ class WriterValueObject {
     public getName(): string {
         return this.name;
     }
+
     public getSourceId(): string | undefined {
         return this.sourceId;
     }

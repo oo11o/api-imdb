@@ -4,8 +4,7 @@ class ProducerValueObject {
         private name: string,
         private sourceId: string | undefined,
         private extraInfo?: string | undefined
-    ) {
-    }
+    ) {}
 
     public getName(): string {
         return this.name;

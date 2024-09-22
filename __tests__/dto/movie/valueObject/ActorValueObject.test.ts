@@ -1,5 +1,5 @@
-import { ActorValueObject } from "../../../../src/dto/movies/valueObject/ActorValueObject";
-import { RoleValueObject} from "../../../../src/dto/movies/valueObject/RoleValueObject";
+import { ActorValueObject } from "../../../../src/dto/movies/valueObject/ActorValueObject.js";
+import { RoleValueObject} from "../../../../src/dto/movies/valueObject/RoleValueObject.js";
 
 describe('ActorValueObject', () => {
     it('should return the correct name', () => {

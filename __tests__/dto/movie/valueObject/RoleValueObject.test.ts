@@ -1,4 +1,4 @@
-import { RoleValueObject} from "../../../../src/dto/movies/valueObject/RoleValueObject";
+import { RoleValueObject} from "../../../../src/dto/movies/valueObject/RoleValueObject.js";
 
 describe('RoleValueObject', () => {
     it('should create a RoleValueObject with given name', () => {

@@ -1,4 +1,4 @@
-import { DirectorValueObject } from "../../../../src/dto/movies/valueObject/DirectorValueObject";
+import { DirectorValueObject } from "../../../../src/dto/movies/valueObject/DirectorValueObject.js";
 
 describe('DirectorValueObject', () => {
     it('should return the correct name', () => {

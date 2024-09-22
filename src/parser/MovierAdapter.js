@@ -1,4 +1,5 @@
-import * as movier from 'movier';
+import * as movier from 'movier'
+
 import {
     ActorValueObject,
     BudgetValueObject,

@@ -1,4 +1,4 @@
-import { ProducerValueObject } from "../../../../src/dto/movies/valueObject/ProducerValueObject";
+import { ProducerValueObject } from "../../../../src/dto/movies/valueObject/ProducerValueObject.js";
 
 describe('ProducerValueObject', () => {
     it('should create a ProducerValueObject with given properties', () => {

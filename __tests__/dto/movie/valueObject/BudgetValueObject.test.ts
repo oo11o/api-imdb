@@ -1,4 +1,4 @@
-import { BudgetValueObject } from "../../../../src/dto/movies/valueObject/BudgetValueObject";
+import { BudgetValueObject } from "../../../../src/dto/movies/valueObject/BudgetValueObject.js";
 
 describe('BudgetValueObject', () => {
     it('should return the correct budget', () => {

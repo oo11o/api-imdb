@@ -1,4 +1,4 @@
-import { WriterValueObject} from "../../../../src/dto/movies/valueObject/WriterValueObject";
+import { WriterValueObject} from "../../../../src/dto/movies/valueObject/WriterValueObject.js";
 
 describe('WriterValueObject', () => {
     it('should create a WriterValueObject with given properties', () => {

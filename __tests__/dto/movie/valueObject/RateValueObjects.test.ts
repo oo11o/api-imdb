@@ -1,4 +1,4 @@
-import { RateValueObject } from "../../../../src/dto/movies/valueObject/RateValueObject";
+import { RateValueObject } from "../../../../src/dto/movies/valueObject/RateValueObject.js";
 
 describe('RateValueObject', () => {
     it('should create a RateValueObject with given properties', () => {

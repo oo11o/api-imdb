@@ -1,5 +1,5 @@
 import { MovierAdapter } from '../../../src/parser/MovierAdapter.js';
-import * as movier from 'movier'; // Переконайтеся, що імпортуєте movier
+import * as movier from 'movier';
 
 jest.mock('movier', () => ({
     getTitleDetailsByIMDBId: jest.fn(),

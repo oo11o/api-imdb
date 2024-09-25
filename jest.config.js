@@ -17,7 +17,10 @@ export default {
       },
     ],
   },
-
+  testPathIgnorePatterns: [
+    "/node_modules/",
+    "/__fixtures__/"
+  ],
   moduleFileExtensions: ['ts', 'js', 'json', 'node'],
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.ts'],

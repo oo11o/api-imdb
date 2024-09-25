@@ -1,5 +1,6 @@
-import { MovierAdapter } from '../../../src/parser/MovierAdapter.js';
+import { MovierAdapter } from '../../src/parser/MovierAdapter.js';
 import * as movier from 'movier';
+import { movieFetchFixture } from "../__fixtures__/movieFetchFixture.js";
 
 jest.mock('movier', () => ({
     getTitleDetailsByIMDBId: jest.fn(),
@@ -13,27 +14,7 @@ describe('MovierAdapter', () => {
     });
 
     test('should return movie details when data is received', async () => {
-        const mockData = {
-            casts: [{ name: 'Actor 1', roles: [{ name: 'Role 1' }] }],
-            allRates: [{ rate: 8.5, rateSource: 'IMDb', votesCount: 1000 }],
-            directors: [{ name: 'Director 1' }],
-            writers: [{ name: 'Writer 1' }],
-            producers: [{ name: 'Producer 1' }],
-            genres: ['Drama'],
-            countriesOfOrigin: ['USA'],
-            keywords: ['keyword1'],
-            detailsLang: 'en',
-            mainType: 'movie',
-            name: 'Movie Title',
-            plot: 'Movie plot',
-            posterImage: { url: 'http://example.com/poster.jpg' },
-            taglines: ['A tagline'],
-            runtime: { seconds: 120 },
-            titleYear: '2023',
-            boxOffice: { budget: 1000000 },
-            ageCategoryTitle: 'PG-13',
-        };
-
+        const mockData = movieFetchFixture;
         (movier.getTitleDetailsByIMDBId as jest.Mock).mockResolvedValue(mockData);
 
         const result = await movierAdapter.getDetailsByIMDBId('tt1234567');

@@ -1,22 +1,16 @@
-// import * as movier from 'movier';
-// import {ImdbServiceInterface} from "./ImdbServiceInterface.js";
-//
-// class ImdbService implements ImdbServiceInterface {
-//     private movier = movier;
-//
-//     async getMovieByIMDBId(id: string): Promise<any> {
-//         // Використання бібліотеки для отримання даних
-//         const movieData = await movier.getTitleDetailsByIMDBId(id);
-//
-//         const movieDTO = new MovieDTO(
-//             movieData.title,
-//             movieData.releaseYear,
-//             movieData.director
-//         );
-//         console.log(movieDTO);
-//         console.log(movieData);
-//         return movieData;
-//     }
-// }
-//
-// export { ImdbService };
+import { inject, injectable } from 'inversify';
+import { MovieServiceInterface} from "./MovieServiceInterface.js";
+import {ImdbParserInterface} from "../../parser/ImdbParserInterface.js";
+import {MovieDTO} from "../../dto/movies/MovieDTO.js";
+import {TYPES} from "../../config/TYPES.js";
+
+@injectable()
+export class MovieService implements MovieServiceInterface{
+    constructor(
+        @inject(TYPES.ImdbParserInterface) private readonly movie: ImdbParserInterface
+    ) {}
+
+    async getMovie(movieId: string): Promise<MovieDTO> {
+        return await this.movie.getDetailsByIMDBId(movieId);
+    }
+}

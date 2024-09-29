@@ -10,7 +10,9 @@ import {
     RoleValueObject,
     WriterValueObject,
 } from '../dto/movies/valueObject/index.js';
+import {injectable} from "inversify";
 
+@injectable()
 class MovierAdapter implements ImdbParserInterface {
     private movier = movier;
 

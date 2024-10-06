@@ -1,6 +1,7 @@
 import * as movier from 'movier';
 import { MovieDTO } from '../dto/movies/MovieDTO.js';
 import { ImdbParserInterface } from './ImdbParserInterface.js';
+import 'reflect-metadata';
 import {
     ActorValueObject,
     BudgetValueObject,

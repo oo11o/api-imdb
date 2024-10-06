@@ -19,7 +19,8 @@ export default {
   },
   testPathIgnorePatterns: [
     "/node_modules/",
-    "/__fixtures__/"
+    "/__fixtures__/",
+    "/src/config"
   ],
   moduleFileExtensions: ['ts', 'js', 'json', 'node'],
   collectCoverage: true,

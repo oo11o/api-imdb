@@ -1,6 +1,7 @@
 import { MovierAdapter } from '../../src/parser/MovierAdapter.js';
 import * as movier from 'movier';
-import { movieFetchFixture } from "../__fixtures__/movieFetchFixture.js";
+// @ts-ignore
+import { movieFetchFixture } from "../__fixtures__/movieFetchFixture";
 
 jest.mock('movier', () => ({
     getTitleDetailsByIMDBId: jest.fn(),

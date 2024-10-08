@@ -1,13 +1,13 @@
 import 'reflect-metadata';
-import { MovieService} from "../../src/services/movie/MovieService";
-import { ImdbParserInterface} from "../../src/parser/ImdbParserInterface";
-import { TYPES} from "../../src/config/TYPES";
+import { MovieService} from "../../src/services/movie/MovieService.js";
+import { ImdbParserInterface} from "../../src/parser/ImdbParserInterface.js";
+import { TYPES} from "../../src/config/TYPES.js";
 import { Container } from 'inversify';
+// @ts-ignore
 import { movieDTOFixture } from "../__fixtures__/movieDTOFixture";
 
-// Підготовка моків
 const mockImdbParser: ImdbParserInterface = {
-    getDetailsByIMDBId: jest.fn() // створюємо мок для методу
+    getDetailsByIMDBId: jest.fn()
 };
 
 describe('MovieService', () => {

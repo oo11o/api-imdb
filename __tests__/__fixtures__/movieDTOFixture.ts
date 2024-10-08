@@ -1,3 +1,4 @@
+// @ts-ignore
 import {
     ActorValueObject,
     BudgetValueObject,
@@ -6,9 +7,10 @@ import {
     RateValueObject,
     RoleValueObject,
     WriterValueObject,
-} from '../../src/dto/movies/valueObject/index';
+} from '../../src/dto/movies/valueObject/index.js';
 
-import {MovieDTO} from "../../src/dto/movies/MovieDTO";
+
+import {MovieDTO} from "../../src/dto/movies/MovieDTO.js";
 export const movieDTOFixture: MovieDTO = {
     actors: [
         new ActorValueObject(

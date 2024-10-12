@@ -19,10 +19,21 @@ export default {
   },
   testPathIgnorePatterns: [
     "/node_modules/",
-    "/__fixtures__/"
+    "/__fixtures__/",
+    "/src/config/",
   ],
+
+  collectCoverageFrom: [
+    '**/*.{ts,js}',
+    '!**/inversify.config.ts', // Виключаємо цей файл з покриття
+    '!**/node_modules/**', // Виключаємо node_modules
+  ],
+
   moduleFileExtensions: ['ts', 'js', 'json', 'node'],
   collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.ts'],
+  collectCoverageFrom: [
+    'src/**/*.ts',
+     '!**/inversify.config.ts',
+  ],
 
 };

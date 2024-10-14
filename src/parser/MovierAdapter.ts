@@ -1,4 +1,5 @@
 import * as movier from 'movier';
+import { injectable } from 'inversify';
 import { MovieDTO } from '../dto/movies/MovieDTO.js';
 import { ImdbParserInterface } from './ImdbParserInterface.js';
 import 'reflect-metadata';
@@ -11,7 +12,6 @@ import {
     RoleValueObject,
     WriterValueObject,
 } from '../dto/movies/valueObject/index.js';
-import {injectable} from "inversify";
 
 @injectable()
 class MovierAdapter implements ImdbParserInterface {
